@@ -14,6 +14,7 @@ import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
 import jetbrains.mps.lang.typesystem.runtime.HUtil;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
@@ -33,7 +34,15 @@ public class JTypeRules_InequationReplacementRule extends AbstractInequationRepl
       } else {
         {
           MessageTarget errorTarget = new NodeMessageTarget();
-          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(equationInfo.getNodeWithError(), "Inconsitent Bitwidth", "r:9ab9fec9-ed9e-4d25-890a-7574633bec2e(xjsnark.typesystem)", "7012155836965851689", null, errorTarget);
+          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(equationInfo.getNodeWithError(), "Inconsistent Bitwidth", "r:9ab9fec9-ed9e-4d25-890a-7574633bec2e(xjsnark.typesystem)", "7012155836965851689", null, errorTarget);
+          HUtil.addAdditionalRuleIdsFromInfo(_reporter_2309309498, equationInfo);
+        }
+      }
+    } else if (SNodeOperations.isInstanceOf(subtype, MetaAdapterFactory.getConcept(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, "xjsnark.structure.JFieldType")) && SNodeOperations.isInstanceOf(supertype, MetaAdapterFactory.getConcept(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, "xjsnark.structure.JFieldType"))) {
+      if (SLinkOperations.getTarget(SNodeOperations.as(subtype, MetaAdapterFactory.getConcept(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, "xjsnark.structure.JFieldType")), MetaAdapterFactory.getReferenceLink(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, 0x68d52c08c1ca734cL, "fieldRec")) != SLinkOperations.getTarget(SNodeOperations.as(supertype, MetaAdapterFactory.getConcept(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, "xjsnark.structure.JFieldType")), MetaAdapterFactory.getReferenceLink(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, 0x68d52c08c1ca734cL, "fieldRec"))) {
+        {
+          MessageTarget errorTarget = new NodeMessageTarget();
+          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(equationInfo.getNodeWithError(), "Inconsistent Field Identifier", "r:9ab9fec9-ed9e-4d25-890a-7574633bec2e(xjsnark.typesystem)", "6549951384327482872", null, errorTarget);
           HUtil.addAdditionalRuleIdsFromInfo(_reporter_2309309498, equationInfo);
         }
       }
@@ -54,6 +63,10 @@ public class JTypeRules_InequationReplacementRule extends AbstractInequationRepl
 
       if (bitWidth1 <= bitWidth2) {
       } else {
+        result_14532009 = false;
+      }
+    } else if (SNodeOperations.isInstanceOf(subtype, MetaAdapterFactory.getConcept(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, "xjsnark.structure.JFieldType")) && SNodeOperations.isInstanceOf(supertype, MetaAdapterFactory.getConcept(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, "xjsnark.structure.JFieldType"))) {
+      if (SLinkOperations.getTarget(SNodeOperations.as(subtype, MetaAdapterFactory.getConcept(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, "xjsnark.structure.JFieldType")), MetaAdapterFactory.getReferenceLink(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, 0x68d52c08c1ca734cL, "fieldRec")) != SLinkOperations.getTarget(SNodeOperations.as(supertype, MetaAdapterFactory.getConcept(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, "xjsnark.structure.JFieldType")), MetaAdapterFactory.getReferenceLink(0x688d542e2a3492cL, 0xa31f0e921fd6a8fbL, 0x68d52c08c1ca7332L, 0x68d52c08c1ca734cL, "fieldRec"))) {
         result_14532009 = false;
       }
     } else if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(SNodeOperations.getConcept(subtype)), SNodeOperations.asSConcept(SNodeOperations.getConcept(supertype)))) {
