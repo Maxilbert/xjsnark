@@ -119,6 +119,9 @@
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
+      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
+        <property id="1068580123138" name="value" index="3clFbU" />
+      </concept>
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
@@ -4059,8 +4062,67 @@
             <property role="3SKdUp" value="This method can be left empty, or used to set Configuration params (see other examples)" />
           </node>
         </node>
-        <node concept="3clFbH" id="17j6vqJOGlt" role="3cqZAp" />
-        <node concept="3clFbH" id="6w4Q6Pf_hpa" role="3cqZAp" />
+        <node concept="3clFbF" id="7Jxp5Bl0MW0" role="3cqZAp">
+          <node concept="37vLTI" id="7Jxp5Bl0N1w" role="3clFbG">
+            <node concept="3clFbT" id="7Jxp5Bl0N2O" role="37vLTx">
+              <property role="3clFbU" value="true" />
+            </node>
+            <node concept="10M0yZ" id="7Jxp5Bl0MY4" role="37vLTJ">
+              <ref role="1PxDUh" to="85wc:~Config" resolve="Config" />
+              <ref role="3cqZAo" to="85wc:~Config.writeCircuits" resolve="writeCircuits" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="7Jxp5Bl0N57" role="3cqZAp">
+          <node concept="37vLTI" id="7Jxp5Bl0N9j" role="3clFbG">
+            <node concept="Xl_RD" id="7Jxp5Bl0NaE" role="37vLTx">
+              <property role="Xl_RC" value="/home/yuan/workspace/mps/circuits" />
+            </node>
+            <node concept="10M0yZ" id="7Jxp5Bl0N56" role="37vLTJ">
+              <ref role="1PxDUh" to="85wc:~Config" resolve="Config" />
+              <ref role="3cqZAo" to="85wc:~Config.outputFilesPath" resolve="outputFilesPath" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="2qKKpug4Uj0" role="3cqZAp">
+          <node concept="37vLTI" id="2qKKpug4UND" role="3clFbG">
+            <node concept="3clFbT" id="2qKKpug4UP1" role="37vLTx">
+              <property role="3clFbU" value="true" />
+            </node>
+            <node concept="10M0yZ" id="2qKKpug4U_g" role="37vLTJ">
+              <ref role="3cqZAo" to="85wc:~Config.multivariateExpressionMinimization" resolve="multivariateExpressionMinimization" />
+              <ref role="1PxDUh" to="85wc:~Config" resolve="Config" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="1t1EHTMeHQY" role="3cqZAp" />
+        <node concept="3SKdUt" id="1t1EHTMguy$" role="3cqZAp">
+          <node concept="3SKdUq" id="1t1EHTMguyA" role="3SKWNk">
+            <property role="3SKdUp" value="Num of threads could be set higher based on the machine specs. Setting it too high will lead to faster timeouts" />
+          </node>
+        </node>
+        <node concept="3clFbF" id="1t1EHTMeHBz" role="3cqZAp">
+          <node concept="37vLTI" id="1t1EHTMeHKr" role="3clFbG">
+            <node concept="3cmrfG" id="1t1EHTMeHNo" role="37vLTx">
+              <property role="3cmrfH" value="1" />
+            </node>
+            <node concept="10M0yZ" id="1t1EHTMeHBy" role="37vLTJ">
+              <ref role="3cqZAo" to="85wc:~Config.arithOptimizerNumThreads" resolve="arithOptimizerNumThreads" />
+              <ref role="1PxDUh" to="85wc:~Config" resolve="Config" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="1t1EHTMeHYG" role="3cqZAp">
+          <node concept="37vLTI" id="1t1EHTMeI8k" role="3clFbG">
+            <node concept="10M0yZ" id="1t1EHTMeHYF" role="37vLTJ">
+              <ref role="3cqZAo" to="85wc:~Config.arithOptimizerTimeoutPerProblemMilliSec" resolve="arithOptimizerTimeoutPerProblemMilliSec" />
+              <ref role="1PxDUh" to="85wc:~Config" resolve="Config" />
+            </node>
+            <node concept="3cmrfG" id="1t1EHTMeIbA" role="37vLTx">
+              <property role="3cmrfH" value="20000" />
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="37vLTG" id="6w4Q6Pf$W4W" role="3clF46">
         <property role="TrG5h" value="args" />
